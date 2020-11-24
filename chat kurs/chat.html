@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <title>chatbox</title>
+    <style>
+        body{
+            background-color:plum;
+        }
+       
+        .chats {
+            height: 100px;
+            width: 30%;
+            background-color:plum;
+            color: rgb(10, 9, 9);
+            border: 1px solid rgb(238, 232, 226);    
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="chats"></div>
+        <div>
+            <input type="text" class="input-chat">
+            <button class="btn-chat">Kirim</button>
+        </div>
+    </main>
+
+    <script>
+        let divChats = document.querySelector(".chats");
+        let inputChat = document.querySelector(".input-chat");
+        let btnChat = document.querySelector(".btn-chat");
+        //console.log("btn-chat")
+
+        btnChat.addEventListener("click", function() {
+            divChats.innerHTML = divChats.innerHTML + "<br>" + "Pesan :" + inputChat.value;
+            inputChat.value = "";
+        })
+    </script>
+</body>
+</html>
